@@ -1,0 +1,227 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, rgba(46, 125, 50, 0.95) 0%, rgba(46, 125, 50, 0.8) 40%, rgba(46, 125, 50, 0.4) 70%, rgba(46, 125, 50, 0) 100%);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 20;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.content {
+  max-width: 48rem;
+  color: white;
+  padding-top: 2.5rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 8rem;
+  }
+}
+
+.subtitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.25;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1));
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: 3.75rem;
+  }
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 36rem;
+  line-height: 1.625;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1));
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.5rem;
+  }
+}
+
+.ctaBtn {
+  display: inline-block;
+  background-color: #4ba146;
+  color: white;
+  font-weight: 700;
+  padding: 1.25rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, rgba(46, 125, 50, 0.95) 0%, rgba(46, 125, 50, 0.8) 40%, rgba(46, 125, 50, 0.4) 70%, rgba(46, 125, 50, 0) 100%);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 20;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.content {
+  max-width: 48rem;
+  color: white;
+  padding-top: 2.5rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 8rem;
+  }
+}
+
+.subtitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.25;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1));
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: 3.75rem;
+  }
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 36rem;
+  line-height: 1.625;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1));
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.5rem;
+  }
+}
+
+.ctaBtn {
+  display: inline-block;
+  background-color: #4ba146;
+  color: white;
+  font-weight: 700;
+  padding: 1.25rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 2px solid transparent;
+}
+
+.ctaBtn:hover {
+  background-color: #e8f5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.coverImage {
+  object-fit: cover;
+  object-position: center;
+}
