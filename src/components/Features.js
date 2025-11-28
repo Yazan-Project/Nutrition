@@ -36,7 +36,7 @@ export default function Features() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section id="features" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.label}>Recursos</span>

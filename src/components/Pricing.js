@@ -45,7 +45,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section id="pricing" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.label}>Planos</span>

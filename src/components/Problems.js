@@ -4,7 +4,7 @@ import styles from '../styles/Problems.module.css';
 
 export default function Problems() {
   return (
-    <section className={styles.section}>
+    <section id="problems" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>

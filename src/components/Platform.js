@@ -4,7 +4,7 @@ import styles from '../styles/Platform.module.css';
 
 export default function Platform() {
   return (
-    <section className={styles.section}>
+    <section id="platform" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.grid}>
           {/* Content */}
