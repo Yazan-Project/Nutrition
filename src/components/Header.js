@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import styles from '../styles/Header.module.css';
+import DockNavigation from './DockNavigation';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,13 +19,17 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className={styles.nav}>
-          <Link href="#" className={styles.navLinkActive}>Início</Link>
-          <Link href="#problems" className={styles.navLink}>Desafios</Link>
-          <Link href="#platform" className={styles.navLink}>Solução</Link>
-          <Link href="#features" className={styles.navLink}>Funcionalidades</Link>
-          <Link href="#faq" className={styles.navLink}>Perguntas Frequentes</Link>
-        </nav>
+        <div className={styles.nav}>
+          <DockNavigation 
+            links={[
+              { href: "#", label: "Início" },
+              { href: "#problems", label: "Desafios" },
+              { href: "#platform", label: "Solução" },
+              { href: "#features", label: "Funcionalidades" },
+              { href: "#faq", label: "Perguntas Frequentes" }
+            ]}
+          />
+        </div>
 
         {/* Actions */}
         <div className={styles.actions}>

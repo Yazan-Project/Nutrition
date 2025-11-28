@@ -1,0 +1,32 @@
+.dockContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.dockItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: color 0.2s ease;
+  will-change: transform;
+}
+
+.dockItem:hover {
+  color: #4ba146;
+}
+
+.dockItemActive {
+  color: #1f2937;
+  font-weight: 700;
+}
