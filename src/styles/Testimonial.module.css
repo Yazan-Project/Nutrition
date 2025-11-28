@@ -48,6 +48,46 @@
   }
 }
 
+.carousel {
+  position: relative;
+  min-height: 300px;
+}
+
+.slide {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.indicator:hover {
+  background-color: var(--secondary-green);
+}
+
+.activeIndicator {
+  background-color: var(--primary-green);
+  transform: scale(1.2);
+}
+
 .author {
   display: flex;
   align-items: center;

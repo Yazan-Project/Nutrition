@@ -1,7 +1,13 @@
+'use client';
+
 import { Database, Calculator, FileText, Smartphone, Users, ShieldCheck } from 'lucide-react';
 import styles from '../styles/Features.module.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+import SpotlightCard from './SpotlightCard';
 
 export default function Features() {
+  const { ref, isVisible } = useScrollAnimation();
+
   const features = [
     {
       icon: <Database size={24} />,
@@ -36,24 +42,28 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className={styles.section}>
+    <section id="features" className={styles.section} ref={ref}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.label}>Recursos</span>
-          <h2 className={styles.title}>
+          <span className={`${styles.label} ${isVisible ? 'animate-fade-in-up' : 'animate-hidden'}`}>Recursos</span>
+          <h2 className={`${styles.title} ${isVisible ? 'animate-fade-in-up delay-100' : 'animate-hidden'}`}>
             Ferramentas Poderosas
           </h2>
         </div>
 
         <div className={styles.grid}>
           {features.map((feature, index) => (
-            <div key={index} className={styles.card}>
+            <SpotlightCard 
+              key={index} 
+              className={`${styles.card} ${isVisible ? 'animate-fade-in-up' : 'animate-hidden'}`}
+              style={{ animationDelay: `${(index + 2) * 100}ms` }}
+            >
               <div className={styles.iconWrapper}>
                 {feature.icon}
               </div>
               <h3 className={styles.cardTitle}>{feature.title}</h3>
               <p className={styles.cardText}>{feature.description}</p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

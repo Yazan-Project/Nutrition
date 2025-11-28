@@ -1,8 +1,14 @@
+'use client';
+
 import { Check } from 'lucide-react';
 import Link from 'next/link';
 import styles from '../styles/Pricing.module.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+import SpotlightCard from './SpotlightCard';
 
 export default function Pricing() {
+  const { ref, isVisible } = useScrollAnimation();
+
   const plans = [
     {
       name: "Básico",
@@ -45,21 +51,25 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className={styles.section}>
+    <section id="pricing" className={styles.section} ref={ref}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.label}>Planos</span>
-          <h2 className={styles.title}>
+          <span className={`${styles.label} ${isVisible ? 'animate-fade-in-up' : 'animate-hidden'}`}>Planos</span>
+          <h2 className={`${styles.title} ${isVisible ? 'animate-fade-in-up delay-100' : 'animate-hidden'}`}>
             Escolha o plano ideal para sua fazenda
           </h2>
-          <p className={styles.description}>
+          <p className={`${styles.description} ${isVisible ? 'animate-fade-in-up delay-200' : 'animate-hidden'}`}>
             Comece gratuitamente e evolua conforme sua produção cresce. Sem contratos de fidelidade.
           </p>
         </div>
 
         <div className={styles.grid}>
           {plans.map((plan, index) => (
-            <div key={index} className={`${styles.card} ${plan.popular ? styles.cardPopular : ''}`}>
+            <SpotlightCard 
+              key={index} 
+              className={`${styles.card} ${plan.popular ? styles.cardPopular : ''} ${isVisible ? 'animate-fade-in-up' : 'animate-hidden'}`}
+              style={{ animationDelay: `${(index + 3) * 100}ms` }}
+            >
               {plan.popular && (
                 <div className={styles.popularBadge}>
                   Mais Popular
@@ -89,7 +99,7 @@ export default function Pricing() {
                   Começar Agora
                 </Link>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

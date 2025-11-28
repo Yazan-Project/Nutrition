@@ -1,22 +1,27 @@
+'use client';
+
 import { AlertTriangle, FileX, TrendingDown } from 'lucide-react';
 import Image from 'next/image';
 import styles from '../styles/Problems.module.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 export default function Problems() {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section id="problems" className={styles.section}>
+    <section id="problems" className={styles.section} ref={ref}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>
+          <h2 className={`${styles.title} ${isVisible ? 'animate-fade-in-up' : 'animate-hidden'}`}>
             A gestão manual está custando caro?
           </h2>
-          <p className={styles.description}>
+          <p className={`${styles.description} ${isVisible ? 'animate-fade-in-up delay-100' : 'animate-hidden'}`}>
             Planilhas confusas, anotações em papel e falta de controle podem estar prejudicando a rentabilidade da sua produção.
           </p>
         </div>
 
         <div className={styles.grid}>
-          <div className={styles.imageContainer}>
+          <div className={`${styles.imageContainer} ${isVisible ? 'animate-scale-in delay-200' : 'animate-hidden'}`}>
              {/* Placeholder for Problem Image */}
              <div className={styles.imageContent}>
                 <Image 
@@ -30,7 +35,7 @@ export default function Problems() {
           </div>
           
           <div className={styles.content}>
-            <div className={styles.item}>
+            <div className={`${styles.item} ${isVisible ? 'animate-fade-in-up delay-300' : 'animate-hidden'}`}>
               <div className={`${styles.iconWrapper} ${styles.iconRed}`}>
                 <FileX size={24} />
               </div>
@@ -40,7 +45,7 @@ export default function Problems() {
               </div>
             </div>
             
-            <div className={styles.item}>
+            <div className={`${styles.item} ${isVisible ? 'animate-fade-in-up delay-400' : 'animate-hidden'}`}>
               <div className={`${styles.iconWrapper} ${styles.iconOrange}`}>
                 <AlertTriangle size={24} />
               </div>
@@ -50,7 +55,7 @@ export default function Problems() {
               </div>
             </div>
 
-            <div className={styles.item}>
+            <div className={`${styles.item} ${isVisible ? 'animate-fade-in-up delay-500' : 'animate-hidden'}`}>
               <div className={`${styles.iconWrapper} ${styles.iconYellow}`}>
                 <TrendingDown size={24} />
               </div>

@@ -11,8 +11,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <div className={styles.logo}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/Logo/Logo.jpg" alt="Nutrition Logo" className="h-8 object-contain brightness-0 invert" />
-              <span>Nutrition</span>
+              <img src="/Logo/Logo.jpg" alt="Nutrition Logo" className={styles.logoImg} />
             </div>
             <p className={styles.brandText}>
               Transformando a pecuária leiteira através da tecnologia e nutrição de precisão.
@@ -62,7 +61,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} NutriLeite. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Nutrition. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

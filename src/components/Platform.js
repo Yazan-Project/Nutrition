@@ -1,14 +1,20 @@
+'use client';
+
 import { CheckCircle, BarChart2 } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Platform.module.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 export default function Platform() {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section id="platform" className={styles.section}>
+    <section id="platform" className={styles.section} ref={ref}>
       <div className={styles.container}>
         <div className={styles.grid}>
           {/* Content */}
-          <div>
+          <div className={isVisible ? 'animate-fade-in-up' : 'animate-hidden'}>
             <h2 className={styles.title}>
               Tudo o que você precisa em um só lugar
             </h2>
@@ -37,16 +43,14 @@ export default function Platform() {
 
           {/* Image Placeholder */}
           <div className={styles.imageWrapper}>
-            <div className={styles.dashboard}>
-               <div className={styles.browserBar}>
-                  <div className={`${styles.dot} ${styles.dotRed}`}></div>
-                  <div className={`${styles.dot} ${styles.dotYellow}`}></div>
-                  <div className={`${styles.dot} ${styles.dotGreen}`}></div>
-               </div>
-               <div className={styles.dashboardContent}>
-                  <BarChart2 className={styles.dashboardIcon} />
-                  <p className={styles.dashboardText}>Dashboard NutriLeite</p>
-               </div>
+            <div className={`${styles.imageContainer} ${isVisible ? 'animate-scale-in delay-200' : 'animate-hidden'}`}>
+               <Image 
+                  src="/Images/Image_003.png" 
+                  alt="Plataforma NutriLeite" 
+                  width={600} 
+                  height={450} 
+                  className={styles.platformImage}
+               />
             </div>
           </div>
         </div>

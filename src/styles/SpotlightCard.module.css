@@ -1,0 +1,24 @@
+.cardContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+  height: 100%;
+}
+
+.spotlight {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(76, 175, 80, 0.15),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.cardContainer:hover .spotlight {
+  opacity: 1;
+}
