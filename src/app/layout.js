@@ -12,6 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  icons: {
+    icon: "/favicon.svg",
+  },
   title: "Nutrition",
   description: "Formulações e Manejo",
 };

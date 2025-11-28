@@ -28,7 +28,7 @@ export default function Header() {
 
         {/* Actions */}
         <div className={styles.actions}>
-          <Link href="#login" className={styles.loginLink}>
+          <Link href="https://g0bf628276fc698-cownutrition.adb.sa-saopaulo-1.oraclecloudapps.com/ords/r/cow_nutrition/nutrition/" className={styles.loginLink}>
             Entrar
           </Link>
           <Link href="#pricing" className={styles.plansBtn}>

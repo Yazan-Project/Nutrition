@@ -9,10 +9,11 @@ import Pricing from '../components/Pricing';
 import Steps from '../components/Steps';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import styles from "../styles/page.module.css";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className={styles.main}>
       <Header />
       <Hero />
       <Problems />

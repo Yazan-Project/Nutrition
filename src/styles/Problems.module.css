@@ -51,13 +51,8 @@
 }
 
 .imageContainer {
-  height: 400px;
-  background-color: #f3f4f6;
   border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed #d1d5db;
+  overflow: hidden;
   order: 2;
 }
 
@@ -67,18 +62,10 @@
   }
 }
 
-.imageContent {
-  text-align: center;
-}
-
-.imageIcon {
-  font-size: 3.75rem;
-  margin-bottom: 1rem;
+.problemImage {
+  width: 100%;
+  height: auto;
   display: block;
-}
-
-.imageText {
-  color: #6b7280;
 }
 
 .content {

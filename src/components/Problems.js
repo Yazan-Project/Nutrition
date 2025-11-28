@@ -1,4 +1,5 @@
 import { AlertTriangle, FileX, TrendingDown } from 'lucide-react';
+import Image from 'next/image';
 import styles from '../styles/Problems.module.css';
 
 export default function Problems() {
@@ -18,8 +19,13 @@ export default function Problems() {
           <div className={styles.imageContainer}>
              {/* Placeholder for Problem Image */}
              <div className={styles.imageContent}>
-                <span className={styles.imageIcon}>📝</span>
-                <p className={styles.imageText}>Imagem: Produtor Estressado com Papéis</p>
+                <Image 
+                  src="/Images/Image_002.png" 
+                  alt="Produtor Estressado com Papéis" 
+                  width={500} 
+                  height={400} 
+                  className={styles.problemImage}
+                />
              </div>
           </div>
           
