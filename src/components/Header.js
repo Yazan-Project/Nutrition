@@ -59,7 +59,7 @@ export default function Header() {
           <Link href="#features" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Funcionalidades</Link>
           <Link href="#faq" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Perguntas Frequentes</Link>
           <div className={styles.mobileActions}>
-            <Link href="#login" className={styles.mobileLogin} onClick={() => setIsMenuOpen(false)}>Entrar</Link>
+            <Link href="https://g0bf628276fc698-cownutrition.adb.sa-saopaulo-1.oraclecloudapps.com/ords/r/cow_nutrition/nutrition/" className={styles.mobileLogin} onClick={() => setIsMenuOpen(false)}>Entrar</Link>
             <Link href="#pricing" className={styles.mobilePlansBtn} onClick={() => setIsMenuOpen(false)}>
               Nossos Planos
             </Link>
